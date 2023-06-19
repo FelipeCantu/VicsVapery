@@ -24,6 +24,11 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   margin-right: 200px;
   z-index: 8;
+  margin-left: 35%;
+  margin-top: -20px;
+  :hover {
+    color: gray;
+  }
   li {
     color: #fff;
     padding: 18px 10px;
@@ -46,12 +51,13 @@ const Ul = styled.ul`
 `;
 
 const StyledLink = styled(Link)`
+  margin: 5px;
   color: black;
   text-decoration: none;
   font-family: Arial, Helvetica, 
     sans-serif;
   :hover {
-    color: black;
+    color: white;
   }
 `;
 
