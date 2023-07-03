@@ -23,9 +23,10 @@ const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   margin-right: 200px;
-  z-index: 8;
+  z-index: 100;
   margin-left: 35%;
   margin-top: -20px;
+  z-index: 4;
   :hover {
     color: gray;
   }

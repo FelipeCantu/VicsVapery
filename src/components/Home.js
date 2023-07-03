@@ -4,6 +4,9 @@ import MainImg from '../assets/mainim.png'
 import Elibut from '../assets/elibut.png'
 import Dispbut from '../assets/dispbut.gif'
 import SmokeBg from '../assets/smokebg.jpeg'
+import Products from './Products'
+import Brand from '../assets/Brand.png'
+import Brand2 from '../assets/Brand2.jpeg'
 
 function Home() {
   return (
@@ -23,14 +26,19 @@ function Home() {
         </BlackButton>
       </ImgButton>
       <Section>
-        <div>
+        <Wrapper>
           <Grade>
-            <div>
-              <img src={SmokeBg} />
-            </div>
+            <img src={SmokeBg} />
           </Grade>
-        </div>
+          <Brands>
+              <img src={Brand} alt="brand logos" />
+              <img src={Brand2} alt="brand2 logo" />
+              <img src={Brand} alt="brand logos" />
+              <img src={Brand2} alt="brand2 logo" />
+          </Brands>
+        </Wrapper>
       </Section>
+      <Products />
     </Main>
   )
 }
@@ -72,16 +80,32 @@ const Section = styled.div`
   img {
     width: 100%;
     margin: 0;
-    opacity: 0.3;
+    height: 300px;
   }
+`
+const Wrapper = styled.div`
+    position: relative;
+    top: 0;
 `
 
 const Grade = styled.div`
-  background: linear-gradient(90deg, rgba(255,0,245,1) 0%, rgba(29,128,253,0.33659401260504207) 50%, rgba(69,233,252,1) 100%);  width: 70%;
-  height: 400px;
-  margin: auto;
-  position: relative;
-  z-index: 3;
+background: linear-gradient(90deg, rgba(255,0,245,1) 0%, rgba(29,128,253,0.33659401260504207) 50%, rgba(69,233,252,1) 100%);  width: 70%;
+margin: auto;
+img {
+  opacity: 0.3;
+}
+`
+
+const Brands = styled.div`
+  position: absolute;
+  top: 0;
+  padding: 50px;
+  padding-left: 350px;
+  img{
+    margin-right: 10px;
+    width: 200px;
+    height: 200px;
+  }
 `
 
 export default Home
