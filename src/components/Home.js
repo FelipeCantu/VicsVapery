@@ -7,6 +7,9 @@ import SmokeBg from '../assets/smokebg.jpeg'
 import Products from './Products'
 import Brand from '../assets/Brand.png'
 import Brand2 from '../assets/Brand2.jpeg'
+import Footer from './Footer'
+import stock from '../assets/stock.jpg'
+import stock2 from '../assets/stock2.jpeg'
 
 function Home() {
   return (
@@ -31,14 +34,19 @@ function Home() {
             <img src={SmokeBg} />
           </Grade>
           <Brands>
-              <img src={Brand} alt="brand logos" />
-              <img src={Brand2} alt="brand2 logo" />
-              <img src={Brand} alt="brand logos" />
-              <img src={Brand2} alt="brand2 logo" />
+            <img src={Brand} alt="brand logos" />
+            <img src={Brand2} alt="brand2 logo" />
+            <img src={Brand} alt="brand logos" />
+            <img src={Brand2} alt="brand2 logo" />
           </Brands>
         </Wrapper>
       </Section>
       <Products />
+      <Stock>
+        <img src={stock} alt="stock image" />
+        <img src={stock2} alt="stock image" />
+      </Stock>
+      <Footer />
     </Main>
   )
 }
@@ -80,7 +88,7 @@ const Section = styled.div`
   img {
     width: 100%;
     margin: 0;
-    height: 300px;
+    height: 250px;
   }
 `
 const Wrapper = styled.div`
@@ -100,12 +108,21 @@ const Brands = styled.div`
   position: absolute;
   top: 0;
   padding: 50px;
-  padding-left: 350px;
+  padding-right: 20%;
+  padding-left: 25%;
   img{
-    margin-right: 10px;
-    width: 200px;
-    height: 200px;
+    margin-right: 50px;
+    width: 150px;
+    height: 150px;
   }
+`
+
+const Stock = styled.div`
+  width: 70%;
+  height: 300px;
+  margin: auto;
+  display: flex;
+
 `
 
 export default Home
