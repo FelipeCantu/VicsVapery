@@ -54,10 +54,6 @@ function Home() {
 const Main = styled.div`
   height: 100vh;
   overflow: auto;
-  p {
-    font-size: 50px;
-    color: black;
-  }
 `;
 
 const ImgButton = styled.button`
