@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import SanityClient from '../client' 
+import SanityClient from '../client'
 
 function Products() {
   const [productData, setProduct] = useState()
@@ -17,34 +17,41 @@ function Products() {
           }
         }
       }`
-      )
+    )
       .then((data) => setProduct(data))
       .catch(console.error)
   }, [])
   return (
-    <Prod>
+    <Product>
+      <h1>Featured Products</h1>
+      <Prod>
         {productData?.map((setProduct) => (
           <div>
-             <img src={setProduct.image.asset.url} alt={setProduct.image.alt} />
-             <p>{setProduct.name}</p>
-             <p>{setProduct.price}</p>
+            <img src={setProduct.image.asset.url} alt={setProduct.image.alt} />
+            <p>{setProduct.name}</p>
+            <p>{setProduct.price}</p>
           </div>
         ))}
-
-    </Prod>
+      </Prod>
+    </Product>
   )
 }
 
+const Product = styled.div`
+  
+`
 
-const Prod = styled.div `
-  display: flex;
-  flex-column: 3fr;
+const Prod = styled.div`
   width: 70%;
   margin: auto;
   height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 400px;
+
   div {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
   }
   img {
     width: 100%;

@@ -17,15 +17,15 @@ function Home() {
       <hr />
       <img src={MainImg} width="70%" height="400px" />
       <ImgButton>
-        <button>
+        <WhiteButton>
           <h1>E-liquids</h1>
           <img src={Elibut} width="700px" height="400px" />
-        </button>
+          <button>Shop Here</button>
+        </WhiteButton>
         <BlackButton>
-          <button>
-            <h1>Disposables</h1>
-            <img src={Dispbut} width="700px" height="400px" />
-          </button>
+          <h1>Disposables</h1>
+          <img src={Dispbut} width="700px" height="400px" />
+          <button>Shop Here</button>
         </BlackButton>
       </ImgButton>
       <Section>
@@ -56,28 +56,28 @@ const Main = styled.div`
   overflow: auto;
 `;
 
-const ImgButton = styled.button`
+const ImgButton = styled.div`
   position: relative;
   width: 70%;
   height: 400px;
   display: flex;
   margin: 0 auto;
-  button {
-    color: black;
-    background: red;
-  }
   h1 {
     position: absolute;
     display: block;
+    padding: 40px;
   }
 `
 
-const BlackButton = styled.button`
+const BlackButton = styled.div`
   padding-right: 200px;
   h1 {
     position: absolute;
     color: white;
   }
+
+`
+const WhiteButton = styled.div`
 `
 
 const Section = styled.div`
