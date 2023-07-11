@@ -67,6 +67,16 @@ const ImgButton = styled.div`
     display: block;
     padding: 40px;
   }
+  button {
+    position: absolute;
+    display: flex;
+    bottom: 25%;
+    background: red;
+    padding: 15px 30px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+  }
 `
 
 const BlackButton = styled.div`
@@ -75,9 +85,16 @@ const BlackButton = styled.div`
     position: absolute;
     color: white;
   }
+  button {
+    left: 63%;
+  }
 
 `
 const WhiteButton = styled.div`
+  display: flex;
+  button {
+    left: 10%;
+  }  
 `
 
 const Section = styled.div`

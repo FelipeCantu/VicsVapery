@@ -26,6 +26,7 @@ function Footer() {
           <h1>Follow Us</h1>
           <SocialIcon
             url='https://www.facebook.com/groups/1466920987379618'
+            target="_blank"
             fgColor='transparent'
             bgColor='white'
             style={{ height: 30, width: 30 }}
