@@ -54,6 +54,11 @@ function Home() {
 const Main = styled.div`
   height: 100vh;
   overflow: auto;
+  @media (max-width: 768px) {
+    img {
+      width: 100%;
+    }
+  }
 `;
 
 const ImgButton = styled.div`
@@ -76,6 +81,14 @@ const ImgButton = styled.div`
     border-radius: 25px;
     color: white;
     font-weight: bold;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    height: 800px;
+    display: grid;
+    width: 100%;  
   }
 `
 
@@ -88,13 +101,17 @@ const BlackButton = styled.div`
   button {
     left: 63%;
   }
-
+  }
 `
 const WhiteButton = styled.div`
   display: flex;
   button {
     left: 10%;
-  }  
+  }
+  @media (max-width: 768px) {
+    width: 1000px;
+
+  }
 `
 
 const Section = styled.div`
@@ -103,6 +120,7 @@ const Section = styled.div`
     margin: 0;
     height: 250px;
   }
+
 `
 const Wrapper = styled.div`
     position: relative;
@@ -114,6 +132,9 @@ background: linear-gradient(90deg, rgba(255,0,245,1) 0%, rgba(29,128,253,0.33659
 margin: auto;
 img {
   opacity: 0.3;
+}
+@media (max-width: 768px) {
+  width: 100%;
 }
 `
 
@@ -128,6 +149,10 @@ const Brands = styled.div`
     width: 150px;
     height: 150px;
   }
+  @media (max-width: 768px) {
+    display: flex;
+    right: -50%;
+  }
 `
 
 const Stock = styled.div`
@@ -135,7 +160,9 @@ const Stock = styled.div`
   height: 300px;
   margin: auto;
   display: flex;
-
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 
 export default Home

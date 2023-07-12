@@ -34,6 +34,7 @@ const Navbar = () => {
 
 const Nav = styled.div`
   position: sticky;
+  z-index: 2;
   img {
     float: left;
     margin-top: -2px;

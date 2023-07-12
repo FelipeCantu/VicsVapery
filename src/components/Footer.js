@@ -104,6 +104,9 @@ const Footers = styled.div`
   hr {
     margin-top: 20px;
   }
+  @media (max-width: 768px) {
+    height: 815px;
+  }
 `
 
 
@@ -132,6 +135,13 @@ const News = styled.div`
     margin-left: 50px; 
     width: 50%;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    img {
+      width: 200px;
+      height: 50px;
+      margin: 20px;
+    }
   }
 `
 const NewsLetter = styled.div `

@@ -22,17 +22,14 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  margin-right: 200px;
-  z-index: 100;
   margin-left: 35%;
   margin-top: -20px;
-  z-index: 4;
   :hover {
     color: gray;
   }
   li {
     color: #fff;
-    padding: 18px 10px;
+    padding: 18px;
   }
   @media (max-width: 1250px) {
      margin-right: 0;
@@ -44,15 +41,15 @@ const Ul = styled.ul`
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;
     right: -100px;
-    height: 100vh;
+    height: 110vh;
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
-  }
+    }
 `;
 
 const StyledLink = styled(Link)`
-  margin: 5px;
+  margin: 10px;
   color: black;
   text-decoration: none;
   font-family: Arial, Helvetica, 

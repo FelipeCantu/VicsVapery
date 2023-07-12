@@ -23,7 +23,7 @@ height: 2rem;
 position: absolute;
 top: 5px;
 right: 10px;
-z-index: 9;
+z-index: 1;
 display: none;
 @media (max-width: 768px) {
   display: flex;
