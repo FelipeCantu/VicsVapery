@@ -13,8 +13,8 @@ const Navbar = () => {
       <Warn>
         <h1>Warning:</h1>
         <p>This Product contains nicotine. Nicotine is an addictive chemical </p>
-        <hr />
       </Warn>
+      <hr />
       <img src={Logo} alt="logo" />
       <Icons>
           <div>
@@ -40,10 +40,26 @@ const Nav = styled.div`
     margin-top: -2px;
     width: 102px;
   }
+  @media (max-width: 768px) {
+    height: 120px;
+    img {
+      height: 85px;
+      width: 80px;
+    }
+  }
 `
 
 const Warn = styled.div`
   color: black;  
+  @media (max-width: 768px) {
+    padding-bottom: 2px;
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
 `
 
 const Icons = styled.div`

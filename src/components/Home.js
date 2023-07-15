@@ -9,7 +9,7 @@ import Brand from '../assets/Brand.png'
 import Brand2 from '../assets/Brand2.jpeg'
 import Footer from './Footer'
 import stock from '../assets/stock.jpg'
-import stock2 from '../assets/stock2.jpeg'
+import stock2 from '../assets/stocks.webp'
 
 function Home() {
   return (
@@ -18,12 +18,12 @@ function Home() {
       <img src={MainImg} width="70%" height="400px" />
       <ImgButton>
         <WhiteButton>
-          <h1>E-liquids</h1>
+          <h1>Disposables</h1>
           <img src={Elibut} width="700px" height="400px" />
           <button>Shop Here</button>
         </WhiteButton>
         <BlackButton>
-          <h1>Disposables</h1>
+          <h1>E-Liquids</h1>
           <img src={Dispbut} width="700px" height="400px" />
           <button>Shop Here</button>
         </BlackButton>
@@ -82,7 +82,8 @@ const ImgButton = styled.div`
     color: white;
     font-weight: bold;
     @media (max-width: 768px) {
-      display: none;
+      display: grid;
+
     }
   }
   @media (max-width: 768px) {

@@ -22,7 +22,7 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
-  margin-left: 35%;
+  margin-left: 20%;
   margin-top: -20px;
   :hover {
     color: gray;
