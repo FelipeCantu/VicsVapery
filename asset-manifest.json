@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.abd64e84.css",
-    "main.js": "/static/js/main.599262fe.js",
+    "main.js": "/static/js/main.b4dbb8a9.js",
     "static/js/726.de734784.chunk.js": "/static/js/726.de734784.chunk.js",
     "static/media/mainim.png": "/static/media/mainim.c603554bd00a243c1459.png",
     "static/media/dispbut.gif": "/static/media/dispbut.24fe8247c6da6dcc46d7.gif",
     "static/media/bandage.png": "/static/media/bandage.503304801024d49692ab.png",
+    "static/media/stocks.webp": "/static/media/stocks.39c37e4c2b9799c2c52f.webp",
     "static/media/Brand.png": "/static/media/Brand.2d2ca5c665f756c4159c.png",
     "static/media/elibut.png": "/static/media/elibut.772d55641205014614b3.png",
     "static/media/Brand2.jpeg": "/static/media/Brand2.cb1433b827ec4c639f37.jpeg",
-    "static/media/stock2.jpeg": "/static/media/stock2.ad3469dc9293fdf3c89d.jpeg",
     "static/media/smokebg.jpeg": "/static/media/smokebg.73912ac6b2d13fa48079.jpeg",
     "static/media/stock.jpg": "/static/media/stock.3449280c5dd9b4ad58a1.jpg",
     "index.html": "/index.html",
     "main.abd64e84.css.map": "/static/css/main.abd64e84.css.map",
-    "main.599262fe.js.map": "/static/js/main.599262fe.js.map",
+    "main.b4dbb8a9.js.map": "/static/js/main.b4dbb8a9.js.map",
     "726.de734784.chunk.js.map": "/static/js/726.de734784.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.599262fe.js"
+    "static/js/main.b4dbb8a9.js"
   ]
 }
