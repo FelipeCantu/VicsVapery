@@ -33,15 +33,17 @@ function Products() {
           </div>
         ))}
       </Prod>
+      <p>see more</p>
     </Product>
   )
 }
 
 const Product = styled.div`
+  padding-bottom: 20px;
   h1 {
     padding: 20px 0;
-
   }
+
 `
 
 const Prod = styled.div`
@@ -61,6 +63,10 @@ const Prod = styled.div`
   }
   p {
     font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 50px;
   }
 `
 
