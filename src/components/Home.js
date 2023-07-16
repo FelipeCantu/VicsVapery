@@ -82,8 +82,7 @@ const ImgButton = styled.div`
     color: white;
     font-weight: bold;
     @media (max-width: 768px) {
-      display: grid;
-
+ 
     }
   }
   @media (max-width: 768px) {
@@ -101,6 +100,11 @@ const BlackButton = styled.div`
   }
   button {
     left: 63%;
+    @media (max-width: 768px) {
+      position: absolute;
+      left: 35%;
+      bottom: 100px;
+    }
   }
   }
 `
@@ -108,6 +112,12 @@ const WhiteButton = styled.div`
   display: flex;
   button {
     left: 10%;
+    @media (max-width: 768px) {
+      position: absolute;
+      left: 35%;
+      top: 33%;
+      height: 50px;
+    }
   }
   @media (max-width: 768px) {
     width: 1000px;
@@ -162,6 +172,7 @@ const Stock = styled.div`
   margin: auto;
   display: flex;
   @media (max-width: 768px) {
+    display: grid;
     width: 100%;
   }
 `
