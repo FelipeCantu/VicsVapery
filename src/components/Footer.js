@@ -3,6 +3,28 @@ import styled from 'styled-components'
 import { EnvelopeIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 import bandage from '../assets/bandage.png'
 import { SocialIcon } from 'react-social-icons'
+import Accordion from './Accordion'
+
+
+const items = [
+  {
+    title: 'Social Media',
+    socialMediaLinks: true
+  },
+  {
+    title: 'Link 1',
+    links: [
+      { url: 'https://google/com', label: 'Google' }
+    ]
+  },
+  {
+    title: 'Link 2',
+    links: [
+      { url: 'https://github.com', label: 'Github' },
+      { url: 'https://stackoverflow.com', label: 'Stack Overflow' }
+    ]
+  }
+]
 
 function Footer() {
   return (
@@ -21,6 +43,9 @@ function Footer() {
           <img src={bandage} width="250px" height="80px" />
         </div>
       </News>
+      <AccordionFooter>
+          <Accordion items={items} />
+        </AccordionFooter>
       <Foot>
         <div>
           <h1>Follow Us</h1>
@@ -119,7 +144,10 @@ const Foot = styled.div`
       width: 70%;
       display: block;
       padding-top: 30px;
-    }  
+    }
+    @media (max-width: 786px){
+      display: none;
+    }
 `
 
 const News = styled.div`
@@ -144,10 +172,16 @@ const News = styled.div`
     }
   }
 `
-const NewsLetter = styled.div `
+const NewsLetter = styled.div`
   padding: 10px;
   button {
     background: white;
     border: none;
+  }
+`
+
+const AccordionFooter = styled.div `
+  @media (min-width: 786px) {
+    display: none;
   }
 `
