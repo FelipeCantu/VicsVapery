@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { EnvelopeIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { EnvelopeIcon, ArrowRightIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 import bandage from '../assets/bandage.png'
 import { SocialIcon } from 'react-social-icons'
 import Accordion from './Accordion'
@@ -8,20 +8,59 @@ import Accordion from './Accordion'
 
 const items = [
   {
-    title: 'Social Media',
+    title: 'Follow  Us',
+    content: (
+      <ChevronDownIcon
+       width='30px'
+       float='right'
+      />
+    ),
     socialMediaLinks: true
   },
   {
-    title: 'Link 1',
+    title: 'Contact Us',
+    content: (
+     <ChevronDownIcon
+      width='30px'
+     />
+    ),
     links: [
-      { url: 'https://google/com', label: 'Google' }
+      { url: '', label: 'Location:'},
+      { url: '', label: 'Texas, USA'},
+      { url: '', label: 'Phone:'},
+      { url: '', label: '1-(123)-123-1234'},
+      { url: '', label: 'Email:'},
+      { url: '', label: 'example@gmail.com'}
     ]
   },
   {
-    title: 'Link 2',
+    title: 'Support',
+    content: (
+     <ChevronDownIcon
+      width='30px'
+     />
+    ),
     links: [
-      { url: 'https://github.com', label: 'Github' },
-      { url: 'https://stackoverflow.com', label: 'Stack Overflow' }
+      { url: '', label: 'Check Order Status'},
+      { url: '', label: 'Payment Options'},
+      { url: '', label: 'Shipping Policies'},
+      { url: '', label: 'Refund Policies'},
+      { url: '', label: 'Zip Code Check'},
+    ]
+  },
+  {
+    title: 'Info',
+    content: (
+      <ChevronDownIcon
+       width='30px'
+      />
+    ),
+    links: [
+      { url: '', label: 'About Us'},
+      { url: '', label: 'Contact Us'},
+      { url: '', label: 'Coupons'},
+      { url: '', label: 'Terms of Service'},
+      { url: '', label: 'Rewards'},
     ]
   }
 ]
@@ -130,7 +169,7 @@ const Footers = styled.div`
     margin-top: 20px;
   }
   @media (max-width: 768px) {
-    height: 815px;
+    height: 90%;
   }
 `
 
