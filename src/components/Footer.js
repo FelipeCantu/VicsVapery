@@ -11,8 +11,8 @@ const items = [
     title: 'Follow  Us',
     content: (
       <ChevronDownIcon
-       width='30px'
-       float='right'
+        width='30px'
+        float='right'
       />
     ),
     socialMediaLinks: true
@@ -20,47 +20,47 @@ const items = [
   {
     title: 'Contact Us',
     content: (
-     <ChevronDownIcon
-      width='30px'
-     />
+      <ChevronDownIcon
+        width='30px'
+      />
     ),
     links: [
-      { url: '', label: 'Location:'},
-      { url: '', label: 'Texas, USA'},
-      { url: '', label: 'Phone:'},
-      { url: '', label: '1-(123)-123-1234'},
-      { url: '', label: 'Email:'},
-      { url: '', label: 'example@gmail.com'}
+      { url: '', label: 'Location:' },
+      { url: '', label: 'Texas, USA' },
+      { url: '', label: 'Phone:' },
+      { url: '', label: '1-(123)-123-1234' },
+      { url: '', label: 'Email:' },
+      { url: '', label: 'example@gmail.com' }
     ]
   },
   {
     title: 'Support',
     content: (
-     <ChevronDownIcon
-      width='30px'
-     />
+      <ChevronDownIcon
+        width='30px'
+      />
     ),
     links: [
-      { url: '', label: 'Check Order Status'},
-      { url: '', label: 'Payment Options'},
-      { url: '', label: 'Shipping Policies'},
-      { url: '', label: 'Refund Policies'},
-      { url: '', label: 'Zip Code Check'},
+      { url: '', label: 'Check Order Status' },
+      { url: '', label: 'Payment Options' },
+      { url: '', label: 'Shipping Policies' },
+      { url: '', label: 'Refund Policies' },
+      { url: '', label: 'Zip Code Check' },
     ]
   },
   {
     title: 'Info',
     content: (
       <ChevronDownIcon
-       width='30px'
+        width='30px'
       />
     ),
     links: [
-      { url: '', label: 'About Us'},
-      { url: '', label: 'Contact Us'},
-      { url: '', label: 'Coupons'},
-      { url: '', label: 'Terms of Service'},
-      { url: '', label: 'Rewards'},
+      { url: '', label: 'About Us' },
+      { url: '', label: 'Contact Us' },
+      { url: '', label: 'Coupons' },
+      { url: '', label: 'Terms of Service' },
+      { url: '', label: 'Rewards' },
     ]
   }
 ]
@@ -83,8 +83,8 @@ function Footer() {
         </div>
       </News>
       <AccordionFooter>
-          <Accordion items={items} />
-        </AccordionFooter>
+        <Accordion items={items} />
+      </AccordionFooter>
       <Foot>
         <div>
           <h1>Follow Us</h1>
@@ -120,24 +120,24 @@ function Footer() {
           <p>Rewards</p>
         </div>
       </Foot>
-      <p>WARNING: Our products contain nicotine,
-        a poisonous and addictive substance.
-        Our products are only intended for committed smokers of legal
-        smoking age and not by non-smokers, children,
-        women who are pregnant or may become pregnant or any
-        person with an elevated risk of, or preexisting condition of,
-        any medical condition which includes, but is not limited to,
-        heart disease, diabetes, high blood pressure or asthma.
-        If you experience any side effects or possible side effects,
-        stop using the product immediately and consult a physician.
-        Product may be poisonous if orally ingested.
-        Our products are not smoking cessation products and have
-        not been tested or guaranteed as such. Our products have
-        not been evaluated by the Food and Drug Administration nor
-        is it intended to treat, prevent or cure any disease or
-        condition. For their protection, please keep out of reach
-        of children and pets. Read our terms of use page before
-        purchasing our products.</p>
+        <p>WARNING: Our products contain nicotine,
+          a poisonous and addictive substance.
+          Our products are only intended for committed smokers of legal
+          smoking age and not by non-smokers, children,
+          women who are pregnant or may become pregnant or any
+          person with an elevated risk of, or preexisting condition of,
+          any medical condition which includes, but is not limited to,
+          heart disease, diabetes, high blood pressure or asthma.
+          If you experience any side effects or possible side effects,
+          stop using the product immediately and consult a physician.
+          Product may be poisonous if orally ingested.
+          Our products are not smoking cessation products and have
+          not been tested or guaranteed as such. Our products have
+          not been evaluated by the Food and Drug Administration nor
+          is it intended to treat, prevent or cure any disease or
+          condition. For their protection, please keep out of reach
+          of children and pets. Read our terms of use page before
+          purchasing our products.</p>
       <hr />
       <p>Copyright © 2023 Vics Vapery. All Rights Reserved.</p>
     </Footers>
@@ -203,11 +203,24 @@ const News = styled.div`
     width: 50%;
   }
   @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 100px;
     width: 100%;
+    h4 {
+      margin-top: 10px;
+    }
     img {
-      width: 200px;
+      width: 90%;
       height: 50px;
-      margin: 20px;
+      margin-left: 250px;
+      margin-top: -35px;
+    }
+    form {
+      margin-top: -40px;
+    }
+    button {
+      height: 30%;
     }
   }
 `
@@ -219,7 +232,7 @@ const NewsLetter = styled.div`
   }
 `
 
-const AccordionFooter = styled.div `
+const AccordionFooter = styled.div`
   @media (min-width: 786px) {
     display: none;
   }
