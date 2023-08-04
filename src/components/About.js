@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import store from '../assets/store.jpeg'
 import translogo from '../assets/translogo.png'
 import store2 from '../assets/vapestore2.webp'
+import Footer from '../components/Footer'
 
 function About() {
   return (
@@ -31,13 +32,13 @@ function About() {
             <p>Welcome to our vape website! We are dedicated to providing you with a comprehensive resource for all things vape-related. Whether you're new to vaping or an experienced enthusiast, we have everything you need to enhance your vaping experience.
               At our vape website, we aim to offer a wide range of high-quality vaping products to suit every preference and budget. We carefully curate our selection, ensuring that we only stock products from reputable and trusted brands in the industry. From starter kits and mods to tanks, coils, and e-liquids, we have you covered.
               Our team consists of passionate vapers who are knowledgeable about the latest trends, products, and safety measures in the vaping world. We strive to provide accurate and up-to-date information, empowering you to make informed decisions about your vaping journey. Whether you're seeking advice on choosing the right device, troubleshooting an issue, or looking for tips and tricks, we are here to help.
-              We prioritize customer satisfaction and aim to provide exceptional service. Our user-friendly website offers a seamless browsing and shopping experience, with detailed product descriptions and customer reviews to assist you in making the best choice. We also provide prompt shipping and a hassle-free return policy, ensuring that your shopping experience is enjoyable from start to finish.
               Safety is of utmost importance to us, and we are committed to promoting responsible vaping practices. We provide educational resources on battery safety, proper usage, and maintenance to ensure that you can enjoy vaping safely. Additionally, we adhere to all applicable regulations and age verification requirements to prevent the sale of vaping products to minors.
               Join our vaping community by subscribing to our newsletter and following us on social media platforms. We regularly share informative articles, industry news, product updates, and exclusive offers to keep you connected and engaged.
               Thank you for choosing our vape website as your go-to resource for all things vape-related. We look forward to serving you and helping you make the most out of your vaping experience.</p>
           </TextSection>
         </AboutUs>
       </AboutSection>
+      <Footer />
     </AboutMain>
 
   )
@@ -144,15 +145,21 @@ const AboutUs = styled.div`
   width: 70%;
   margin: auto;
   img {
-    width: 500px;
+    width: 400px;
     height: 500px;
     padding-right: 40px;
     object-fit: cover;
+    margin: auto;
 
   }
   p{
     font-size: 14px;
     justify-content: right; 
+    margin: auto;
+    width: 90%;
+    border-left: 1px solid;
+    margin-right: 100px;
+    padding-left: 50px;
   }
   h1 {
     padding-bottom: 35px;

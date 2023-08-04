@@ -8,8 +8,6 @@ import Products from './Products'
 import Brand from '../assets/Brand.png'
 import Brand2 from '../assets/Brand2.jpeg'
 import Footer from './Footer'
-import stock from '../assets/stock.jpg'
-import stock2 from '../assets/stocks.webp'
 
 function Home() {
   return (
@@ -42,10 +40,6 @@ function Home() {
         </Wrapper>
       </Section>
       <Products />
-      <Stock>
-        <img src={stock} alt="stock image" />
-        <img src={stock2} alt="stock image" />
-      </Stock>
       <Footer />
     </Main>
   )
@@ -163,17 +157,6 @@ const Brands = styled.div`
   @media (max-width: 768px) {
     display: flex;
     right: -50%;
-  }
-`
-
-const Stock = styled.div`
-  width: 70%;
-  height: 300px;
-  margin: auto;
-  display: flex;
-  @media (max-width: 768px) {
-    display: grid;
-    width: 100%;
   }
 `
 

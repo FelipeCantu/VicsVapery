@@ -4,6 +4,8 @@ import { EnvelopeIcon, ArrowRightIcon, ChevronDownIcon } from '@heroicons/react/
 import bandage from '../assets/bandage.png'
 import { SocialIcon } from 'react-social-icons'
 import Accordion from './Accordion'
+import stock from '../assets/stock.jpg'
+import stock2 from '../assets/stocks.webp'
 
 
 const items = [
@@ -68,6 +70,10 @@ const items = [
 function Footer() {
   return (
     <Footers>
+      <Stock>
+        <img src={stock} alt="" />
+        <img src={stock2} alt="" />
+      </Stock>
       <News>
         <div>
           <NewsLetter>
@@ -146,10 +152,12 @@ function Footer() {
 
 export default Footer
 
+
 const Footers = styled.div`
+
   font-size: 12px;
   width: 100%;
-  height: 680px;
+  height: 130%;
   p {
     width: 70%;
     margin: auto;
@@ -173,6 +181,16 @@ const Footers = styled.div`
   }
 `
 
+const Stock = styled.div`
+  width: 70%;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  @media (max-width: 768px) {
+    display: grid;
+    width: 100%;
+  }
+`
 
 const Foot = styled.div`
     background: black;
