@@ -1,8 +1,12 @@
 import React from 'react'
+import Navigation from './Navigation'
 
 function Eliquids() {
   return (
-    <div>Eliquids</div>
+    <div>
+      <Navigation />
+      <h1>E-liquids</h1>
+    </div>
   )
 }
 

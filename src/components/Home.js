@@ -8,6 +8,8 @@ import Products from './Products'
 import Brand from '../assets/Brand.png'
 import Brand2 from '../assets/Brand2.jpeg'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
+
 
 function Home() {
   return (
@@ -18,12 +20,16 @@ function Home() {
         <WhiteButton>
           <h1>Disposables</h1>
           <img src={Elibut} width="700px" height="400px" />
-          <button>Shop Here</button>
+          <Link to='/Disposables'>
+            <button>Shop Here</button>
+          </Link>
         </WhiteButton>
         <BlackButton>
           <h1>E-Liquids</h1>
           <img src={Dispbut} width="700px" height="400px" />
-          <button>Shop Here</button>
+          <Link to='/Eliquids'>
+            <button>Shop Here</button>
+          </Link>
         </BlackButton>
       </ImgButton>
       <Section>

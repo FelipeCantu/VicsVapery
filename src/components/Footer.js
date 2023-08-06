@@ -94,13 +94,23 @@ function Footer() {
       <Foot>
         <div>
           <h1>Follow Us</h1>
-          <SocialIcon
-            url='https://www.facebook.com/groups/1466920987379618'
-            target="_blank"
-            fgColor='transparent'
-            bgColor='white'
-            style={{ height: 30, width: 30 }}
-          />
+          <Socials>
+              <SocialIcon
+                url='https://www.facebook.com/groups/1466920987379618'
+                target="_blank"
+                fgColor='transparent'
+                bgColor='white'
+                style={{ height: 30, width: 30, margin: 5 }}
+                margin-right='20px'
+              />
+              <SocialIcon
+                url='https://www.instagram.com/vicsvapery/?igshid=MmIzYWVlNDQ5Yg%3D%3D'
+                target="_blank"
+                fgColor='transparent'
+                bgColor='white'
+                style={{ height: 30, width: 30 }}
+              />
+          </Socials>
         </div>
         <div>
           <h1>Contact Us</h1>
@@ -126,24 +136,24 @@ function Footer() {
           <p>Rewards</p>
         </div>
       </Foot>
-        <p>WARNING: Our products contain nicotine,
-          a poisonous and addictive substance.
-          Our products are only intended for committed smokers of legal
-          smoking age and not by non-smokers, children,
-          women who are pregnant or may become pregnant or any
-          person with an elevated risk of, or preexisting condition of,
-          any medical condition which includes, but is not limited to,
-          heart disease, diabetes, high blood pressure or asthma.
-          If you experience any side effects or possible side effects,
-          stop using the product immediately and consult a physician.
-          Product may be poisonous if orally ingested.
-          Our products are not smoking cessation products and have
-          not been tested or guaranteed as such. Our products have
-          not been evaluated by the Food and Drug Administration nor
-          is it intended to treat, prevent or cure any disease or
-          condition. For their protection, please keep out of reach
-          of children and pets. Read our terms of use page before
-          purchasing our products.</p>
+      <p>WARNING: Our products contain nicotine,
+        a poisonous and addictive substance.
+        Our products are only intended for committed smokers of legal
+        smoking age and not by non-smokers, children,
+        women who are pregnant or may become pregnant or any
+        person with an elevated risk of, or preexisting condition of,
+        any medical condition which includes, but is not limited to,
+        heart disease, diabetes, high blood pressure or asthma.
+        If you experience any side effects or possible side effects,
+        stop using the product immediately and consult a physician.
+        Product may be poisonous if orally ingested.
+        Our products are not smoking cessation products and have
+        not been tested or guaranteed as such. Our products have
+        not been evaluated by the Food and Drug Administration nor
+        is it intended to treat, prevent or cure any disease or
+        condition. For their protection, please keep out of reach
+        of children and pets. Read our terms of use page before
+        purchasing our products.</p>
       <hr />
       <p>Copyright © 2023 Vics Vapery. All Rights Reserved.</p>
     </Footers>
@@ -205,6 +215,10 @@ const Foot = styled.div`
     @media (max-width: 786px){
       display: none;
     }
+`
+
+const Socials = styled.div`
+    margin-left: 10%;
 `
 
 const News = styled.div`

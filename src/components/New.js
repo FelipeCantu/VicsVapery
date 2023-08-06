@@ -1,8 +1,12 @@
 import React from 'react'
+import Navigation from './Navigation'
 
 function New() {
   return (
-    <div>New</div>
+    <div> 
+      <Navigation />
+      <h1>New</h1>
+    </div>
   )
 }
 

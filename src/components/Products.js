@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import SanityClient from '../client'
+import { Link } from 'react-router-dom'
 
 function Products() {
   const [productData, setProduct] = useState()
@@ -13,7 +14,7 @@ function Products() {
         image {
           asset -> {
             _id,
-            url
+            url,
           }
         }
       }`
@@ -33,7 +34,9 @@ function Products() {
           </div>
         ))}
       </Prod>
-      <p>see more</p>
+      <Link to='/New'>
+        <p>see more</p>
+      </Link>
     </Product>
   )
 }
@@ -43,7 +46,10 @@ const Product = styled.div`
   h1 {
     padding: 20px 0;
   }
-
+  p {
+    color: black;
+    text-decoration: none;
+  }
 `
 
 const Prod = styled.div`
