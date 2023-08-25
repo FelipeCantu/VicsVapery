@@ -1,3 +1,6 @@
-export const schemaTypes = [Products]
+export const schemaTypes = [ post, author, blockContent, disposablepost]
 
-import Products from "./Products"
+import author from './author'
+import blockContent from './blockContent'
+import disposablepost from './disposablepost'
+import post from './post'

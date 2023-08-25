@@ -1,11 +1,11 @@
 import './App.css';
 import Home from './components/Home'
 import Navbar from './components/Navbar/Navbar';
-import New from './components/New'
 import Disposables from './components/Disposables';
-import About from './components/About'
-import Eliquids from './components/Eliquids'
+import About from './components/About';
+import Eliquids from './components/Eliquids';
 import { BrowserRouter as Router, Route, Redirect, BrowserRouter } from 'react-router-dom'
+import SinglePost from './components/SinglePost';
 
 function App() {
   return (
@@ -18,14 +18,17 @@ function App() {
             <Route path='/About'>
               <About />
             </Route>
-            <Route path='/New'>
-              <New />
-            </Route>
             <Route path='/Eliquids'>
               <Eliquids />
             </Route>
             <Route path='/Disposables'>
               <Disposables />
+            </Route>
+            <Route path='/post/:slug'>
+              <SinglePost />
+            </Route>
+            <Route path='/disp/:slug'>
+              <SinglePost />
             </Route>
           </Router>
         </BrowserRouter>

@@ -9,7 +9,6 @@ const Sidebar = ({ open }) => {
         <Ul open={open}>
           <li><StyledLink to="/Home">Home</StyledLink></li>
           <li><StyledLink to="/About">About</StyledLink></li>
-          <li><StyledLink to="/New">New</StyledLink></li>
           <li><StyledLink to="/Eliquids">E-Liquids</StyledLink></li>
           <li><StyledLink to="/Disposables">Disposables</StyledLink></li>
         </Ul>

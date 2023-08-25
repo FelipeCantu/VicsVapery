@@ -4,12 +4,11 @@ import MainImg from '../assets/mainim.png'
 import Elibut from '../assets/elibut.png'
 import Dispbut from '../assets/dispbut.gif'
 import SmokeBg from '../assets/smokebg.jpeg'
-import Products from './Products'
 import Brand from '../assets/Brand.png'
 import Brand2 from '../assets/Brand2.jpeg'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
-
+import Post from './Post'
 
 function Home() {
   return (
@@ -45,7 +44,8 @@ function Home() {
           </Brands>
         </Wrapper>
       </Section>
-      <Products />
+      <Post />
+      <Link to='/Disposables'>see more</Link>
       <Footer />
     </Main>
   )
