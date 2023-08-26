@@ -1,4 +1,5 @@
 import React from 'react'
+import EliquidProduct from './EliquidProducts'
 import Navigation from './Navigation'
 
 function Eliquids() {
@@ -6,6 +7,7 @@ function Eliquids() {
     <div>
       <Navigation />
       <h1>E-liquids</h1>
+      <EliquidProduct />
     </div>
   )
 }

@@ -30,6 +30,9 @@ function App() {
             <Route path='/disp/:slug'>
               <SinglePost />
             </Route>
+            <Route path='/eliq/:slug'>
+              <SinglePost />
+            </Route>
           </Router>
         </BrowserRouter>
       </div>
