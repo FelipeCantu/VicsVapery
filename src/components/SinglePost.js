@@ -11,10 +11,24 @@ const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
 }
-
-export default function SinglePost() {
+const SinglePost = ({ product }) => {
   const [singlePost, setSinglePost] = useState(null);
   const { slug } = useParams();
+  const [quantity, setQuantity] = useState(1);
+
+  const handleQuantityChange = (newQuantity) => {
+    setQuantity(newQuantity);
+  };
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
 
   useEffect(() => {
     sanityClient
@@ -58,8 +72,8 @@ export default function SinglePost() {
                   <p>Flavors:
                     <label for='flavors'>
                       <select name='flavors' id="flavors">
-                         {singlePost.flavors.map((flavor, index) => (
-                         <option key={index}>{flavor} </option>
+                        {singlePost.flavors.map((flavor, index) => (
+                          <option key={index}>{flavor} </option>
                         ))}
                       </select>
                     </label>
@@ -80,6 +94,18 @@ export default function SinglePost() {
               dataset="production"
             />
           </div>
+          <ProductContainer>
+            <div>
+              <button onClick={handleDecrement}>-</button>
+              <input
+                type="number"
+                value={quantity}
+                onChange={(e) => handleQuantityChange(e.target.value)}
+              />
+              <button onClick={handleIncrement}>+</button>
+            </div>
+          </ProductContainer>
+          <Button><button>Add to Cart</button></Button>
         </article>
       </main>
     </Single>
@@ -91,8 +117,45 @@ const Load = styled.div`
 `
 
 const Single = styled.div`
+background: #d3d3d3;
+border: 1px solid #ccc;
+padding: 20px;
+margin: auto;
+max-width: 500px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   img {
     width: 200px;
     height: 200px;
   }
 `
+
+const ProductContainer = styled.div`
+  align-items: center;
+  margin-top: 10px;
+  button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  input {
+    padding: 5px;
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+`;
+
+const Button = styled.div`
+  button {
+    background: red;
+    padding: 15px 30px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+`
+
+
+export default SinglePost;
