@@ -60,7 +60,6 @@ export default function Post() {
 }
 
 const Posts = styled.div `
-  background: blue;
   justify-content: center;
   width: 70%;
   height 100%;
@@ -75,7 +74,6 @@ const Posts = styled.div `
     text-decoration: none;
   }
   article {
-    background: purple;
     margin-bottom: 5px;
     display: inline-grid;
     grid-template: 1fr 1fr 1fr;

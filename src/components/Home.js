@@ -45,7 +45,7 @@ function Home() {
         </Wrapper>
       </Section>
       <Post />
-      <Link to='/Disposables'>see more</Link>
+      <More><Link to='/Disposables'><p>see more</p></Link></More>
       <Footer />
     </Main>
   )
@@ -163,6 +163,14 @@ const Brands = styled.div`
   @media (max-width: 768px) {
     display: flex;
     right: -50%;
+  }
+`
+const More = styled.div `
+  p {
+    color: black;
+  }
+  a {
+    text-decoration: none;
   }
 `
 

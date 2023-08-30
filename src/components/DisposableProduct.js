@@ -61,6 +61,29 @@ export default function DisposablesProduct() {
 }
 
 const Posts = styled.div `
+justify-content: center;
+width: 70%;
+height 100%;
+margin: auto;
+h3 {
+  color: black;
+}
+p{
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+article {
+  margin-bottom: 5px;
+  display: inline-grid;
+  grid-template: 1fr 1fr 1fr;
+  margin-right: 25px;
+  img {
+    width: 100%;
+    height: 150px;
+  }
+}
   img {
     width: 100px;
     height: 100px;

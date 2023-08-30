@@ -117,7 +117,6 @@ const Load = styled.div`
 `
 
 const Single = styled.div`
-background: #d3d3d3;
 border: 1px solid #ccc;
 padding: 20px;
 margin: auto;
