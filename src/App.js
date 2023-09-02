@@ -12,7 +12,7 @@ import styled from 'styled-components'
 function App() {
   return (
     <div className="App">
-        <Router basename='/Home' >
+        <Router>
           <Navbar />
           <Redirect to="/Home" />
           <Route path="/Home" component={Home} />
