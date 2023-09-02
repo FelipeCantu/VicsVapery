@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Disposables from './components/Disposables';
 import About from './components/About';
 import Eliquids from './components/Eliquids';
-import { BrowserRouter as Router, Route, Redirect, BrowserRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import SinglePost from './components/SinglePost';
 import Footer from './components/Footer';
 import styled from 'styled-components'
@@ -12,8 +12,7 @@ import styled from 'styled-components'
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Router>
+        <Router basename='/Home' >
           <Navbar />
           <Redirect to="/Home" />
           <Route path="/Home" component={Home} />
@@ -39,7 +38,6 @@ function App() {
             <Footer />
           </Overflow>
         </Router>
-      </BrowserRouter>
     </div>
   );
 }
