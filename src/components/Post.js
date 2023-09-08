@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 export default function Post() {
   const [postData, setPost] = useState(null);
-
   useEffect(() => {
     sanityClient
       .fetch(

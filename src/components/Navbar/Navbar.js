@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../../assets/vicslogo.jpg'
 import Menu from './Menu'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import {
   MagnifyingGlassIcon, UserCircleIcon, ShoppingCartIcon
 } from '@heroicons/react/24/outline'
@@ -17,15 +18,17 @@ const Navbar = () => {
       <hr />
       <img src={Logo} alt="logo" />
       <Icons>
-          <div>
+        <div>
+          <Link to='/cart'>
             <ShoppingCartIcon />
-          </div>
-          <div>
-            <UserCircleIcon />
-          </div>
-          <div>
-            <MagnifyingGlassIcon />
-          </div>
+          </Link>
+        </div>
+        <div>
+          <UserCircleIcon />
+        </div>
+        <div>
+          <MagnifyingGlassIcon />
+        </div>
       </Icons>
       <Menu />
     </Nav>
@@ -69,6 +72,7 @@ const Icons = styled.div`
     height: 45px;
     float: right;
     padding: 5px;
+    color: black;
   }
 `
 

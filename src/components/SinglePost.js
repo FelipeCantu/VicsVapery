@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import sanityClient from "../client.js";
-import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import styled from 'styled-components'
+import { useCart } from "./CartContext";
 
 
-
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-  return builder.image(source);
-}
-const SinglePost = ({ product }) => {
+const SinglePost = () => {
   const [singlePost, setSinglePost] = useState(null);
   const { slug } = useParams();
   const [quantity, setQuantity] = useState(1);
+  const history = useHistory();
+
+  const { addToCart } = useCart();
 
   const handleQuantityChange = (newQuantity) => {
     setQuantity(newQuantity);
@@ -27,6 +25,14 @@ const SinglePost = ({ product }) => {
   const handleDecrement = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
+    }
+  };
+
+  const handleAddToCart = () => {
+    if (singlePost) {
+      addToCart(singlePost, quantity);
+      // Navigate to the shopping cart page
+      history.push('/cart'); // Replace '/cart' with the actual cart route
     }
   };
 
@@ -105,7 +111,9 @@ const SinglePost = ({ product }) => {
               <button onClick={handleIncrement}>+</button>
             </div>
           </ProductContainer>
-          <Button><button>Add to Cart</button></Button>
+          <Button>
+            <button onClick={handleAddToCart}>Add to Cart</button>
+          </Button>
         </article>
       </main>
     </Single>
