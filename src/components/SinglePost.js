@@ -31,8 +31,8 @@ const SinglePost = () => {
   const handleAddToCart = () => {
     if (singlePost) {
       addToCart(singlePost, quantity);
-      // Navigate to the shopping cart page
-      history.push('/cart'); // Replace '/cart' with the actual cart route
+      
+      history.push('/cart'); 
     }
   };
 

@@ -1,40 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useCart } from './CartContext';
+import StripePayment from './StripePayment';
+import { Elements } from '@stripe/react-stripe-js';
+import stripePromise from '../stripe';
 
 const Cart = () => {
   const { cart, removeFromCart } = useCart();
-  const [total, setTotal] = useState(0);
+  const [isCheckout, setIsCheckout] = useState(false);
 
-  useEffect(() => {
-    // Function to calculate the total price
-    const calculateTotal = () => {
-      return cart.reduce((total, item) => {
-        return total + item.product.price * item.quantity;
-      }, 0);
-    };
-
-    // Load cart data from localStorage when the component is mounted
-    const loadCartFromLocalStorage = () => {
-      const cartData = JSON.parse(localStorage.getItem('cart'));
-      if (cartData) {
-        setTotal(calculateTotal());
-      }
-    };
-
-    loadCartFromLocalStorage();
-  }, [cart]);
-
-  // Function to save cart data to localStorage
-  const saveCartToLocalStorage = (cartData) => {
-    localStorage.setItem('cart', JSON.stringify(cartData));
+  const handlePaymentSuccess = (paymentMethod) => {
+    // Handle successful payment here, e.g., send paymentMethod to the server for confirmation
+    // Reset the cart or perform other actions
+    console.log('Payment successful:', paymentMethod);
   };
 
-  // Function to handle item removal and update cart data in localStorage
-  const handleRemove = (productId) => {
-    const updatedCart = cart.filter((item) => item.product._id !== productId);
-    saveCartToLocalStorage(updatedCart);
-    removeFromCart(productId);
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => {
+      return total + item.product.price * item.quantity;
+    }, 0);
   };
 
   return (
@@ -50,7 +34,7 @@ const Cart = () => {
                 <CartItemName>{item.product.title}</CartItemName>
                 <CartItemPrice>${item.product.price.toFixed(2)}</CartItemPrice>
                 <CartItemQuantity>
-                  <button onClick={() => handleRemove(item.product._id)}>
+                  <button onClick={() => removeFromCart(item.product._id)}>
                     Remove
                   </button>
                   <span>Quantity: {item.quantity}</span>
@@ -60,22 +44,32 @@ const Cart = () => {
           ))
         )}
       </CartItems>
-      {cart.length > 0 && (
+      {cart.length > 0 && !isCheckout && (
         <CartTotal>
-          <h3>Total: ${total.toFixed(2)}</h3>
-          {/* Checkout button */}
+          <h3>Total: ${calculateTotal().toFixed(2)}</h3>
+          <CheckoutButton onClick={() => setIsCheckout(true)}>
+            Checkout
+          </CheckoutButton>
         </CartTotal>
+      )}
+      {isCheckout && (
+        <Elements stripe={stripePromise}>
+          <StripePayment onPaymentSuccess={handlePaymentSuccess} />
+        </Elements>
       )}
     </CartContainer>
   );
 };
 
+// ... rest of the code
 
 const CartContainer = styled.div`
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
-
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const CartItems = styled.div`
@@ -133,6 +127,7 @@ const CheckoutButton = styled.button`
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 `;
 
 export default Cart;
